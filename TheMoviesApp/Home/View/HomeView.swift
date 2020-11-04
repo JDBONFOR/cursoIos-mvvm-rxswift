@@ -8,19 +8,19 @@
 import UIKit
 
 class HomeView: UIViewController {
-    
+    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityView: UIActivityIndicatorView!
     
     private var router = HomeRouter()
     private var viewModel = HomeViewModel()
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         viewModel.bind(view: self, router: router)
     }
-
 }
 
 // MARK: - Extensions
