@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeView" customModule="TheMoviesApp" customModuleProvider="target">
             <connections>
+                <outlet property="activityView" destination="sbp-qU-o3C" id="7lB-iU-uPH"/>
+                <outlet property="tableView" destination="XvD-ee-wql" id="yIV-6I-DF2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,22 +20,39 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The movies App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCJ-k3-41j">
-                    <rect key="frame" x="146" y="80" width="123" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XvD-ee-wql">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sbp-qU-o3C">
+                    <rect key="frame" x="189" y="230" width="37" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="37" id="4En-XO-lUP"/>
+                        <constraint firstAttribute="height" constant="37" id="c5I-O7-Fig"/>
+                    </constraints>
+                    <color key="color" systemColor="systemPurpleColor"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="138" y="143"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XvD-ee-wql" secondAttribute="bottom" id="31D-HS-Lhw"/>
+                <constraint firstItem="sbp-qU-o3C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="186" id="7S5-FH-Vwm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sbp-qU-o3C" secondAttribute="trailing" constant="188" id="CdJ-Ck-cKV"/>
+                <constraint firstItem="XvD-ee-wql" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="I6l-J1-SVX"/>
+                <constraint firstItem="sbp-qU-o3C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="189" id="LsK-nh-agk"/>
+                <constraint firstItem="XvD-ee-wql" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PIZ-N5-RYH"/>
+                <constraint firstItem="XvD-ee-wql" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rdQ-z0-vns"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="142.63392857142856"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

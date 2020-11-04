@@ -15,6 +15,7 @@
 		9C58241E2551827300FBBEF6 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C58241C2551827300FBBEF6 /* HomeView.xib */; };
 		9C582423255182E700FBBEF6 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C582422255182E700FBBEF6 /* HomeRouter.swift */; };
 		9C58242A2551847000FBBEF6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5824292551847000FBBEF6 /* HomeViewModel.swift */; };
+		9C7809152552C314002383BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7809142552C314002383BE /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9C58241C2551827300FBBEF6 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		9C582422255182E700FBBEF6 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		9C5824292551847000FBBEF6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9C7809142552C314002383BE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				9C5823FC255180FD00FBBEF6 /* SceneDelegate.swift */,
 				9C58240F255181B000FBBEF6 /* Home */,
 				9C582411255181D000FBBEF6 /* DetailView */,
+				9C7809132552C2E5002383BE /* Common */,
 				9C582403255180FF00FBBEF6 /* Assets.xcassets */,
 				9C582405255180FF00FBBEF6 /* LaunchScreen.storyboard */,
 				9C582408255180FF00FBBEF6 /* Info.plist */,
@@ -119,6 +122,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9C7809132552C2E5002383BE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9C7809142552C314002383BE /* Constants.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 				9C5823FB255180FD00FBBEF6 /* AppDelegate.swift in Sources */,
 				9C58242A2551847000FBBEF6 /* HomeViewModel.swift in Sources */,
 				9C5823FD255180FD00FBBEF6 /* SceneDelegate.swift in Sources */,
+				9C7809152552C314002383BE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
