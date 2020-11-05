@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		9C582423255182E700FBBEF6 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C582422255182E700FBBEF6 /* HomeRouter.swift */; };
 		9C58242A2551847000FBBEF6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5824292551847000FBBEF6 /* HomeViewModel.swift */; };
 		9C7809152552C314002383BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7809142552C314002383BE /* Constants.swift */; };
+		9C7809E62554164A002383BE /* ManagerConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7809E52554164A002383BE /* ManagerConnector.swift */; };
+		9C7809E925541741002383BE /* MoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7809E825541741002383BE /* MoviesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		9C582422255182E700FBBEF6 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		9C5824292551847000FBBEF6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9C7809142552C314002383BE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9C7809E52554164A002383BE /* ManagerConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerConnector.swift; sourceTree = "<group>"; };
+		9C7809E825541741002383BE /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,11 +47,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		878DA4D8C85BE6944A16EBC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9C5823EE255180FD00FBBEF6 = {
 			isa = PBXGroup;
 			children = (
 				9C5823F9255180FD00FBBEF6 /* TheMoviesApp */,
+				9C7809E42554161A002383BE /* NetworkManager */,
 				9C5823F8255180FD00FBBEF6 /* Products */,
+				878DA4D8C85BE6944A16EBC7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +133,7 @@
 		9C5824282551844400FBBEF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9C7809E825541741002383BE /* MoviesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +144,14 @@
 				9C7809142552C314002383BE /* Constants.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		9C7809E42554161A002383BE /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				9C7809E52554164A002383BE /* ManagerConnector.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C7809E925541741002383BE /* MoviesModel.swift in Sources */,
+				9C7809E62554164A002383BE /* ManagerConnector.swift in Sources */,
 				9C58241D2551827300FBBEF6 /* HomeView.swift in Sources */,
 				9C582423255182E700FBBEF6 /* HomeRouter.swift in Sources */,
 				9C5823FB255180FD00FBBEF6 /* AppDelegate.swift in Sources */,
