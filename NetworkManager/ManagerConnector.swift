@@ -16,7 +16,7 @@ class ManagerConnector {
         return Observable.create { (observer) -> Disposable in
             
             let session = URLSession.shared
-            var request = URLRequest(url: URL(string: Constant.URL.main+Constant.Endpoints.urlListPopularMovies)!)
+            var request = URLRequest(url: URL(string: Constant.URL.main+Constant.Endpoints.urlListPopularMovies+"?api_key="+Constant.apiKey)!)
             
             request.httpMethod = "GET"
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")

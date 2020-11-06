@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import RxSwift
 
 class HomeViewModel {
     private weak var view: HomeView? //Cuando usamos la vista, queremos q haga referencia debil, para ciclo de memoria
     private var router: HomeRouter?
+    private var service = ManagerConnector()
     
     // Metodo de inicializacion
     func bind(view: HomeView, router: HomeRouter) {
@@ -18,6 +20,10 @@ class HomeViewModel {
         
         // binder router con vista
         self.router?.setSourceView(view)
+    }
+    
+    func getListOfMovies() -> Observable<[Movie]> {
+        return service.getPopularMovies()
     }
     
 }
