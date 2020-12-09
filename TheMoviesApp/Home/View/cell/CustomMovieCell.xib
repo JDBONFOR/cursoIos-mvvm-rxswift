@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,7 +61,7 @@
                     <constraint firstAttribute="trailing" secondItem="UVw-0e-Zqr" secondAttribute="trailing" constant="16" id="7nz-F6-gVl"/>
                     <constraint firstItem="NL5-mZ-kUA" firstAttribute="leading" secondItem="UVw-0e-Zqr" secondAttribute="leading" id="IAX-WX-iPZ"/>
                     <constraint firstItem="vhq-lB-ODo" firstAttribute="trailing" secondItem="UVw-0e-Zqr" secondAttribute="trailing" id="K4s-HN-eR8"/>
-                    <constraint firstAttribute="bottom" secondItem="Xfr-ib-m4R" secondAttribute="bottom" constant="16" id="KYh-Yq-CiU"/>
+                    <constraint firstItem="Xfr-ib-m4R" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Nxb-Hw-mH0"/>
                     <constraint firstItem="BDw-ax-14Y" firstAttribute="leading" secondItem="Xfr-ib-m4R" secondAttribute="trailing" constant="10" id="RBe-k5-PO4"/>
                     <constraint firstItem="UVw-0e-Zqr" firstAttribute="top" secondItem="BDw-ax-14Y" secondAttribute="bottom" constant="16" id="TWP-js-18A"/>
                     <constraint firstItem="NL5-mZ-kUA" firstAttribute="leading" secondItem="vhq-lB-ODo" secondAttribute="leading" id="Ufa-pm-7oc"/>

@@ -26,4 +26,7 @@ class HomeViewModel {
         return service.getPopularMovies()
     }
     
+    func routetoDetailView(movieId: String) {
+        router?.navigateTo(movieId: movieId)
+    }    
 }

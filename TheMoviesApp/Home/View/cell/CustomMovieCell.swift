@@ -18,11 +18,11 @@ class CustomMovieCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setData(movie: Movie) {
+        self.imageView?.imageFromServerURL(url: "\(Constant.URL.urlImages+movie.posterPath)", placeholder: UIImage(named: "claqueta")!)
+        self.movieTitle.text = movie.originalTitle
+        self.descriptionMovieLabel.text = movie.overview
     }
     
 }
