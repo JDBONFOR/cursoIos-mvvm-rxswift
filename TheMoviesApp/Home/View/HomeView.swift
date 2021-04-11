@@ -1,10 +1,3 @@
-//
-//  HomeView.swift
-//  TheMoviesApp
-//
-//  Created by Juan Bonforti on 03/11/2020.
-//
-
 import UIKit
 import RxSwift
 import RxCocoa
@@ -14,12 +7,14 @@ class HomeView: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var activityView: UIActivityIndicatorView!
     
-    private var router = HomeRouter()
+    // MARK: - Vars
     private var viewModel = HomeViewModel()
     private var disposeBag = DisposeBag()
-    
     private var movies = [Movie]()
     private var filteredMovies = [Movie]()
+    
+    // Navigator
+    private let homeNavigator = HomeRouter()
     
     lazy var searchController: UISearchController = ({
         let controller = UISearchController(searchResultsController: nil)
@@ -38,7 +33,7 @@ class HomeView: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = "The movies App"
-        viewModel.bind(view: self, router: router)
+        viewModel.bind(view: self, router: homeNavigator)
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -136,9 +131,9 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if searchController.isActive && searchController.searchBar.text != "" {
-            viewModel.routetoDetailView(movieId: String(self.filteredMovies[indexPath.row].id))
+            homeNavigator.open(route: .movieDetail(movieId: String(self.filteredMovies[indexPath.row].id)))
         } else {
-            viewModel.routetoDetailView(movieId: String(self.movies[indexPath.row].id))
+            homeNavigator.open(route: .movieDetail(movieId: String(self.movies[indexPath.row].id)))
         }
     }
 }

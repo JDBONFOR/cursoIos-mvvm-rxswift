@@ -18,8 +18,4 @@ class HomeViewModel {
     func getListOfMovies() -> Observable<[Movie]> {
         return service.getPopularMovies()
     }
-    
-    func routetoDetailView(movieId: String) {
-        router?.navigateTo(movieId: movieId)
-    }    
 }

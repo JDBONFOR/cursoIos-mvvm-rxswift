@@ -16,7 +16,7 @@ extension UIImageView {
             }
             
             DispatchQueue.main.async {
-                guard let data = data else {return}
+                guard let data = data else { return }
                 let image = UIImage(data: data)
                 self.image = image
             }

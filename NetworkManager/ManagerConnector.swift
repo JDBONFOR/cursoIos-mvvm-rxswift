@@ -5,7 +5,6 @@ class ManagerConnector {
     
     func getPopularMovies() -> Observable<[Movie]> {
         
-        // Empaqueto todo el request en un Clousure de RxSwift
         return Observable.create { (observer) -> Disposable in
             
             let session = URLSession.shared
@@ -49,7 +48,6 @@ class ManagerConnector {
     
     func getDetailMovie(movieId: String) -> Observable<MovieDetail> {
         
-        // Empaqueto todo el request en un Clousure de RxSwift
         return Observable.create { (observer) -> Disposable in
             
             let session = URLSession.shared
@@ -88,6 +86,7 @@ class ManagerConnector {
             }
             
         }
+        
     }
     
 }

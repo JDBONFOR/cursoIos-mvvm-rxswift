@@ -1,25 +1,27 @@
 import Foundation
 import UIKit
 
-class HomeRouter {
+enum HomeRoutes {
+    case home
+    case movieDetail(movieId: String)
+}
+
+class HomeRouter: NavigatorProtocol {
+    typealias routes = HomeRoutes
+    
     private var sourceView: UIViewController?
     
-    var viewController: UIViewController {
-        return createViewController()
-    }
-    
-    private func createViewController() -> UIViewController {
-        let view = HomeView(nibName: "HomeView", bundle: Bundle.main)
-        return view
+    public func open(route: HomeRoutes) {
+        switch route {
+        case .home:
+            sourceView?.navigationController?.pushViewController(HomeView(), animated: true)
+        case .movieDetail(let movieId):
+            sourceView?.navigationController?.pushViewController(DetailView(movieId: movieId), animated: true)
+        }
     }
     
     func setSourceView(_ sourceView: UIViewController?) {
         guard let view = sourceView else { fatalError("Error desconocido") }
         self.sourceView = view
-    }
-    
-    func navigateTo(movieId: String) {
-        let detailView = DetailRouter(movieId: movieId).viewController
-        sourceView?.navigationController?.pushViewController(detailView, animated: true)
     }
 }

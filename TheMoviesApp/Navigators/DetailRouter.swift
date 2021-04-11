@@ -1,25 +1,23 @@
 import UIKit
 
-class DetailRouter {
+enum DetailRoutes {
+    case detailMovie(movieId: String)
+}
+
+class DetailRouter: NavigatorProtocol {
+    typealias routes = DetailRoutes
+    
     private var sourceView: UIViewController?
-    var movieId: String?
     
-    var viewController: UIViewController {
-        return createViewController()
-    }
-    
-    init(movieId: String? = "") {
-        self.movieId = movieId
+    public func open(route: DetailRoutes) {
+        switch route {
+        case .detailMovie(let movieId):
+            sourceView?.navigationController?.pushViewController(DetailView(movieId: movieId), animated: true)
+        }
     }
     
     func setSourceView(_ sourceView: UIViewController?) {
         guard let view = sourceView else { fatalError("Error desconocido") }
         self.sourceView = view
-    }
-    
-    private func createViewController() -> UIViewController {
-        let view = DetailView(nibName: "DetailView", bundle: Bundle.main)
-        view.movieId = self.movieId
-        return view
     }
 }
