@@ -1,10 +1,3 @@
-//
-//  HomeViewModel.swift
-//  TheMoviesApp
-//
-//  Created by Juan Bonforti on 03/11/2020.
-//
-
 import Foundation
 import RxSwift
 

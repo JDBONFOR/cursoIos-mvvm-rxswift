@@ -1,10 +1,3 @@
-//
-//  Constants.swift
-//  TheMoviesApp
-//
-//  Created by Juan Bonforti on 04/11/2020.
-//
-
 import Foundation
 
 struct Constant {

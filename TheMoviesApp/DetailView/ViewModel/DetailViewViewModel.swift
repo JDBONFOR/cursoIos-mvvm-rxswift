@@ -1,10 +1,3 @@
-//
-//  DetailViewViewModel.swift
-//  TheMoviesApp
-//
-//  Created by Juan Bonforti on 9/12/20.
-//
-
 import Foundation
 import RxSwift
 

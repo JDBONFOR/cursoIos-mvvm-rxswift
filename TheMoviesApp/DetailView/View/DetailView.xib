@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="sqE-DI-fyh">
-                    <rect key="frame" x="20" y="44" width="374" height="697.5"/>
+                    <rect key="frame" x="20" y="60" width="374" height="697.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mr8-vT-ceL">
                             <rect key="frame" x="144.5" y="0.0" width="85" height="38.5"/>
@@ -103,7 +103,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="sqE-DI-fyh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="G2Q-KJ-zaH"/>
+                <constraint firstItem="sqE-DI-fyh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="G2Q-KJ-zaH"/>
                 <constraint firstItem="sqE-DI-fyh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="IgE-HN-uJx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sqE-DI-fyh" secondAttribute="trailing" constant="20" id="dMi-4g-bkK"/>
                 <constraint firstItem="sqE-DI-fyh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oCj-oo-bJH"/>

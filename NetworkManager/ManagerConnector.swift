@@ -1,10 +1,3 @@
-//
-//  ManagerConnector.swift
-//  TheMoviesApp
-//
-//  Created by Juan Bonforti on 05/11/2020.
-//
-
 import Foundation
 import RxSwift
 

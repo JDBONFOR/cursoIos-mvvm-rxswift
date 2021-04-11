@@ -1,10 +1,3 @@
-//
-//  DetailView.swift
-//  TheMoviesApp
-//
-//  Created by Juan Bonforti on 9/12/20.
-//
-
 import UIKit
 import RxSwift
 
@@ -35,6 +28,26 @@ class DetailView: UIViewController {
         viewModel.bind(view: self, router: router)
     }
 
+}
+
+// MARK: - Private Methods
+extension DetailView {
+    
+    func getDataAndShowDetailMovie() {
+        guard let movieId = movieId else { return }
+        
+        return viewModel.getDetailMovie(movieId: movieId)
+            .subscribe(onNext: { movie in
+                self.setupUI(movie: movie)
+            },
+            onError: { error in
+                print("Ha ocurrido un error \(error)")
+            },
+            onCompleted: {
+                
+            }).disposed(by: disposeBag)
+    }
+    
     func setupUI(movie: MovieDetail) {
         DispatchQueue.main.async {
             self.titleLabel.text = movie.title
@@ -44,19 +57,4 @@ class DetailView: UIViewController {
             self.valorizationLabel.text = String(movie.voteAverage)
         }
     }
-    
-    func getDataAndShowDetailMovie() {
-        guard let movieId = movieId else { return }
-        
-        return viewModel.getDetailMovie(movieId: movieId)
-            .subscribe(onNext: { movie in
-                self.setupUI(movie: movie)
-            }
-            ,onError: { error in
-                print("Ha ocurrido un error \(error)")
-            }, onCompleted: {
-                
-            }).disposed(by: disposeBag)
-    }
-
 }

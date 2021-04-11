@@ -1,12 +1,3 @@
-//
-//  HomeRouter.swift
-//  TheMoviesApp
-//
-//  Created by Juan Bonforti on 03/11/2020.
-//
-
-
-// Esta clase creara objeto HOME, pero tambien servira de router para ir a otras vistas/pantallas
 import Foundation
 import UIKit
 
